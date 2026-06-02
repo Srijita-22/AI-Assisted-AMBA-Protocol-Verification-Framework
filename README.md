@@ -1,65 +1,135 @@
-# AI-Assisted Protocol Violation Detection for AMBA APB
+# AI-Assisted Protocol Violation Detection Framework
 
-## Overview
+## 🚀 Overview
 
-This project implements and verifies an AMBA APB Slave using Verilog and Cocotb. The goal is to extend traditional protocol verification by integrating Machine Learning techniques for automated protocol violation detection.
+This project implements a **hybrid RTL + Verification + AI framework** for detecting protocol violations in AMBA-based systems.
 
-## Features
+It combines:
+- RTL Design (APB + AXI-Lite)
+- Cocotb-based verification
+- SystemVerilog-style testbench concepts
+- AI/ML-based classification of protocol violations
+- Rule-based monitoring and checking
+- UVM-inspired verification architecture (Part-D)
 
-* AMBA APB Slave RTL Design
-* Cocotb-Based Verification Environment
-* APB Read and Write Transaction Validation
-* Automated Testbench Execution
-* Transaction Dataset Generation (Planned)
-* AI-Based Protocol Violation Detection (Planned)
+---
 
-## Tools and Technologies
+## 🏗️ Architecture
+RTL (APB / AXI-Lite)
+↓
+Cocotb Testbench (Python)
+↓
+Transaction Dataset Generation
+↓
+AI/ML Model (Sklearn Classifier)
+↓
+Violation Prediction + Classification
+↓
+Monitor + Rule-Based Checker
+↓
+UVM-style Verification Environment (Part-D)
 
-* Verilog HDL
-* Cocotb
-* Python
-* Icarus Verilog
-* GTKWave
-* Scikit-Learn
 
-## Project Structure
 
-ai-protocol-violation-detector/
+---
 
-├── rtl/
+## 📁 Project Structure
 
-│ └── apb_slave.v
+Part-A_APB/
+Part-B_AXI_Lite/
+Part-C_AXI_Monitor/
+Part-D_AXI_UVM/
 
-├── tb/
 
-│ └── test_apb.py
 
-├── data/
+---
 
-├── ai_model/
+## 🔹 Part-A: APB + AI Classification
+- APB Slave RTL design
+- Cocotb verification environment
+- Dataset generation from transactions
+- ML model training (classification of violations)
+- Feature importance analysis
 
-├── docs/
+---
 
-├── Makefile
+## 🔹 Part-B: AXI-Lite + AI Extension
+- AXI-Lite slave implementation
+- Extended dataset generation
+- AI model reuse for AXI protocol analysis
+- Confusion matrix and evaluation metrics
 
-└── README.md
+---
 
-## Current Status
+## 🔹 Part-C: AXI Protocol Monitor
+- Transaction-level monitor
+- Rule-based violation checker
+- CSV-based logging of protocol activity
+- Detection of invalid protocol behavior
 
-✔ APB Slave RTL Implemented
+---
 
-✔ Cocotb Verification Completed
+## 🔹 Part-D: UVM-style AXI Verification Environment
+- AXI interface definition
+- Driver + Monitor + Scoreboard architecture
+- RTL simulation using SystemVerilog (Icarus)
+- UVM-inspired verification flow (lightweight implementation)
 
-✔ GitHub Repository Setup Completed
+---
 
-🔄 Dataset Generation In Progress
+## 🧠 Key Features
 
-🔄 Machine Learning Integration In Progress
+- Hybrid **RTL + Python + AI** verification flow
+- Automated dataset generation from simulations
+- ML-based protocol violation classification
+- Rule-based + AI-based dual checking
+- Scalable verification architecture
+- UVM-style verification modeling
 
-## Future Work
+---
 
-* Randomized APB Transaction Generation
-* Protocol Violation Injection
-* Dataset Collection and Labeling
-* Random Forest Based Violation Detection
-* Coverage Metrics and Reporting
+## 🛠️ Tools & Technologies
+
+- Verilog / SystemVerilog
+- Cocotb (Python-based verification)
+- Python (NumPy, Pandas, Scikit-learn, Matplotlib)
+- Icarus Verilog
+- Machine Learning (Classification models)
+
+---
+
+## 📊 Results
+
+- High accuracy ML classifier for protocol violation detection
+- Automated feature extraction from RTL transactions
+- Successful detection of:
+  - Missing handshake signals
+  - Invalid address access
+  - Protocol timing violations
+
+---
+
+## 🎯 Learning Outcomes
+
+- RTL design and verification flow
+- Python-based hardware verification (Cocotb)
+- ML integration in hardware verification
+- Protocol-level debugging techniques
+- UVM-style architecture understanding
+
+---
+
+## 📌 Future Improvements
+
+- Full UVM migration using SystemVerilog
+- Real AXI4 full protocol support
+- Deep Learning-based anomaly detection
+- Integration with formal verification tools
+
+---
+
+## 👨‍💻 Author
+
+Srijita-22
+
+GitHub: https://github.com/Srijita-22
