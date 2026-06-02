@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+from sklearn.metrics import ConfusionMatrixDisplay
 import pandas as pd
 import pickle
 import matplotlib.pyplot as plt
@@ -100,6 +102,19 @@ cm = confusion_matrix(
     y_pred
 )
 
+disp = ConfusionMatrixDisplay(
+    confusion_matrix=cm
+)
+
+disp.plot()
+
+plt.tight_layout()
+
+plt.savefig(
+    "results/confusion_matrix.png"
+)
+
+plt.close()
 print("\nConfusion Matrix:")
 print(cm)
 
